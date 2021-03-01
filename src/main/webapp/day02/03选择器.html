@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器</title>
+    <style>
+        #d1{
+            color: red;
+        }
+        .c1{
+            color: green;
+        }
+        /* 分组选择器 */
+        #d1,.c1{
+            background-color: pink;
+        }
+        /*任意元素选择器*/
+        *{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">div1</div>
+    <div>div2</div>
+    <div class="c1">div3</div>
+    <span>span1</span>
+    <span>span2</span>
+    <span class="c1">span3</span>
+
+</body>
+</html>

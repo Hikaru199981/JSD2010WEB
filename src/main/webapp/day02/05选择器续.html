@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器续</title>
+    <style>
+        /*子孙后代选择器*/
+        /*body div div span{
+            color: red;
+        }*/
+        /*子元素选择器*/
+        div>span{
+            color: red;
+        } /*2345都红*/
+        body>div>div>span{
+            color: pink;
+        }/*34*/
+        body>div>span{
+            color: blue;
+        }/*2*/
+
+        /*属性选择器*/
+        input[type='text']{
+            background-color: yellow;
+        }
+        /*伪类选择器*/
+        /*未访问状态*/
+        a:link{
+            color: green;
+        }
+        /*访问过状态*/
+        a:visited{
+            color: pink;
+        }
+        /*悬停状态*/
+        a:hover{
+            color: red;
+        }
+        /*点击状态*/
+        a:active{
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <a href="01分区标签.html">超链接1</a>
+    <a href="02CSS引入方式.html">超链接2</a>
+    <a href="03选择器.html">超链接3</a>
+    <a href="04选择器练习.html">超链接4</a>
+    <br>
+
+    <input type="text" placeholder="请输入用户名"><br>
+    <input type="password" placeholder="请输入密码"><br>
+
+    <span>s1</span>
+    <div>
+        <span>s2</span>
+        <div>
+            <span>s3</span>
+        </div>
+        <div>
+            <span>s4</span>
+            <div><span>s5</span></div>
+        </div>
+    </div>
+</body>
+</html>
