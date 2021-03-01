@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字体相关</title>
+    <style>
+        div{
+            width: 200px;
+            height: 50px;
+            border: 1px solid red;
+            /*文本修饰
+              overline上划线
+              underline下划线
+              line-through 删除线
+              none 没有线*/
+            text-decoration: line-through;
+            /*水平对齐方式*/
+            text-align: center;
+            /*字体颜色*/
+            color: red;
+            /*行高 多行控制间距 单行可以实现垂直居中*/
+            line-height: 50px;
+            /*文本阴影
+              颜色
+              x偏移值(右正) 越大越向右偏移,非倾斜度
+              y偏移值(下正) 越大越向下
+              浓度 值越大越模糊
+             */
+            text-shadow: green 10px 10px 5px;
+            /*字体大小 默认大小16px*/
+            font-size: 20px;
+            /*字体加粗*/
+            font-weight: bold;
+        }
+        a{
+            text-decoration: none;/*去掉下划线*/
+        }
+        h1{
+            font-weight: normal;/*去掉自带加粗效果*/
+            /*斜体*/
+            /*font-style: italic;*/
+            /*字体*/
+            /*可以设置多个字体,从后往前查找有的字体,优先用前面的字体,都没有就使用默认字体*/
+            /*font-family: Calibri,xxx,xxx; */
+            /*有些字体有引号,有些字体没有*/
+            font: 20px "Yu Mincho Demibold";
+        }
+    </style>
+</head>
+<body>
+    <h1>这是一个h1</h1>
+    <a href="#">超链接</a>
+    <div>文本字体测试</div>
+</body>
+</html>

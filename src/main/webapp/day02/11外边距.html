@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>外边距</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+        }
+        #d1{
+            /*margin: 50px; *//*四个方向都是50*/
+            /*margin: 50px 100px;*//*上下和左右赋值*/
+            /*margin: 0 auto;*//*居中*/
+            /*margin: 10px 20px 30px 40px;*//*上右下左赋值*/
+
+            /*因为边框也有宽度,所以100对不上
+            margin-top: 50px;
+            margin-left: 101px;*/
+            /*和下面的相邻元素的距离
+            margin-bottom: 100px;*/
+        }
+        #d2{
+            /*margin-top: 100px;*//*距d1 100px*/
+        }
+        span{
+            border: 1px solid blue;
+        }
+        #s1{
+            margin-right: 50px;
+        }
+        #s2{
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <span id="s1">span1</span><span id="s2">span2</span>
+    <div id="d1">div1</div>
+    <div id="d2">div2</div>
+    <div id="d3">div3</div>
+</body>
+</html>
