@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格标签</title>
+</head>
+<body>
+    <!--cellspacing 单元格间距 cellpadding 单元格距内容的距离-->
+    <table border="1" cellspacing="0" cellpadding="10">
+        <tr><!--table row 表示行-->
+            <!--table data 表示数据 表示列-->
+            <!--colspan跨列-->
+            <td colspan="2" align="center">1-1</td>
+            <td>1-3</td>
+            <!--rowspan跨行-->
+            <td rowspan="2">1-4</td>
+        </tr>
+        <tr>
+            <td>2-1</td><td>2-2</td><td>2-3</td>
+        </tr>
+        <tr>
+            <td>3-1</td><td>3-2</td><td>3-3</td><td>3-4</td>
+        </tr>
+    </table>
+    <!--练习:按要求创建一个3*3表格-->
+    <table border="1" cellspacing="0" cellpadding="10">
+        <tr>
+            <td colspan="2"></td>
+            <td rowspan="2"></td>
+        </tr>
+        <tr>
+            <td rowspan="2"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2"></td>
+        </tr>
+    </table>
+
+    <table border="1" cellspacing="0">
+        <caption>订单列表</caption><!--表格标题 自动居中-->
+        <tr>
+            <!--th table header 表头 加粗并居中-->
+            <th>编号</th><th>商品名称</th>
+            <th>商品价格</th><th>商品数量</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>华为mete40 pro手机</td>
+            <td>6000</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>小米电视</td>
+            <td>3000</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>总价:</td>15000元<td colspan="3"></td>
+        </tr>
+    </table>
+
+</body>
+</html>

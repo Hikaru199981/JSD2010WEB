@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+<body>
+    <h3>注册页面</h3>
+    <form action="http://www.tmooc.cn">
+        <!--所有控件必须写name属性-->
+
+        <!--
+            value 显示的默认值
+            placeholder 占位文本
+            maxlength 最大字符长度
+            readonly 只读,不能修改
+         -->
+        用户名:<input type="text" name="username" value="abc"
+                   placeholder="请输入用户名"
+                   maxlength="5" readonly="readonly"><br>
+        密码:<input type="password" name="password"
+                  placeholder="请输入密码"><br>
+
+        <!--
+            单选 必须相同的name值
+            必须添加value,否则提交的是on
+            checked 默认选中
+         -->
+        性别:<input type="radio" name="gender" value="m" id="r1">
+            <label for="r1">男</label>
+            <input type="radio" name="gender" checked="checked" value="w" id="r2">
+            <label for="r2">女</label><br>
+
+        <!--多选-->
+        兴趣爱好:<input type="checkbox" name="hobby" value="ldm" checked="checked">撸代码
+        <input type="checkbox" name="hobby" value="wz">王者荣耀
+        <input type="checkbox" name="hobby" value="cj">吃鸡<br>
+
+        <!--日期选择器-->
+        生日:<input type="date" name="birthday"><br>
+
+        <!--文件选择器-->
+        靓照:<input type="file" name="pic"><br>
+
+        <!--下拉选择-->
+        所在地:
+        <select name="city">
+            <option value="bj">北京</option>
+            <option value="sh" selected>上海</option>
+            <option value="gz">广州</option>
+        </select><br>
+
+        <!--文本域 获取用户多行输入的文本-->
+        个人介绍:
+        <textarea name="intro" placeholder="说点儿啥..."
+        cols="30" rows="3"><!--写在此处的注释会被显示!-->
+        </textarea><br>
+        <!--30列3行 cols代表列数 rows代表行数-->
+
+        <input type="submit" value="注册">
+        <input type="reset" value="重置">
+        <!--reset是让表单刷新,不刷新页面-->
+
+        <input type="button" value="按钮">
+        <!--自定义按钮,点了没反应,具体设置方法在动态网页中涉及-->
+    </form>
+</body>
+</html>
