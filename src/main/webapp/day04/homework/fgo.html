@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fate/Grand Order</title>
+    <style>
+        body{
+            width: 100%;
+            margin: 0; /* 去掉留白 */
+        }
+
+        /* 1.实现bili头部 */
+        #bili{
+            height: 36px;
+            padding: 10px 12px;
+        }
+        .bili_list{
+            list-style-type: none;
+        }
+        .bili_list li a{
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+        }
+
+        /*1.1 bili_left*/
+        #bili_logo{
+            position: absolute;
+            top: 2px;
+            left: 0;
+            height: 50px;
+            width: 104px;
+        }
+        #bili_d1 span{
+            position: relative;
+            top: -10px;
+            font-size: 13px;
+        }
+        #bili_mainlist{
+            position: relative;
+            top: -4px;
+            left: -4px;
+        }
+        #bili_phone{
+            position: absolute;
+            top:8px;
+            left: 427px;
+        }
+        #bili_phone img{
+            position: relative;
+            top:7px;
+        }
+        #bili_left .bili_list{
+            margin-left: 50px;
+        }
+        #bili_left li{
+            float: left;
+            margin-left: 10px;
+            line-height: 1px;
+        }
+
+        /*1.2 bili_middle*/
+
+
+        /*1.3 bili_right*/
+        #bili_right img{
+            position: absolute;
+            top: 3px;
+            right: 400px;
+            height: 47px;
+            width: 51px;
+        }
+        #bili_right li{
+            top: -50px;
+            float: right;
+            margin-left: 10px;
+            line-height: 1px;
+        }
+        #bili_right span{
+            position: relative;
+            top: -17px;
+            width: 100px;
+            height: 36px;
+            display: block;
+            background-color: #FB7299;
+            text-align: center;
+            line-height: 36px;
+            border-radius: 2px;
+            margin-right: 12px;
+        }
+        #bili_right span a{
+            color: white;
+        }
+
+
+        /*2.实现top */
+        #top{
+            height: 46px;
+            background-color: #161616;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <div id="bili">
+            <div id="bili_left">
+                <div>
+                    <ul class="bili_list">
+                        <li>
+                            <div id="bili_d1">
+                                <img src="bilibili.png" alt="" id="bili_logo">
+                                <span>主站</span>
+                                <img src="bili_mainlist.png" alt="" id="bili_mainlist">
+                            </div>
+                        </li>
+                        <li><a href="#">番剧</a></li>
+                        <li><a href="#">游戏中心</a></li>
+                        <li><a href="#">直播</a></li>
+                        <li><a href="#">会员购</a></li>
+                        <li><a href="#">漫画</a></li>
+                        <li><a href="#">赛事</a></li>
+                        <li id="bili_phone"><a href="#">
+                            <img src="bili_phone.png" alt="">
+                            下载APP
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="bili_middle">
+
+            </div>
+            <div id="bili_right">
+                <div>
+                    <ul class="bili_list">
+                        <li><span><a href="#">投稿</a></span></li>
+                        <li><a href="#">创作中心</a></li>
+                        <li><a href="#">历史</a></li>
+                        <li><a href="#">收藏</a></li>
+                        <li><a href="#">动态</a></li>
+                        <li><a href="#">消息</a></li>
+                        <li><a href="#">大会员</a></li>
+                        <li><img src="bili_head.png"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="top"></div>
+        <div id="picd1"></div>
+        <div id="picd2"></div>
+        <div id="txtd3"></div>
+        <div id="picd4"></div>
+        <div id="txtd5"></div>
+        <div id="picd6"></div>
+        <div id="bottom"></div>
+        <div id="left"></div>
+    </div>
+</body>
+</html>
