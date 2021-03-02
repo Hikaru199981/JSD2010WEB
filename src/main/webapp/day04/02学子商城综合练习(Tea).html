@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学子商城综合练习Tea</title>
+    <style>
+        body{
+            font: 12px "simhei", Arial, Helvetica, sans-serif;
+        }
+        body>div{
+            width: 366px;
+            height: 233px;
+            background-color: #E8E8E8;
+        }
+        #div_top{
+            width: 100%;
+            height: 35px;
+            background-color: #0AA1ED;
+            border-radius: 2px;
+        }
+        #div_top>img{
+            margin: 8px 0 0 10px;
+        }
+        #div_top>span{
+            position: relative;
+            top: -4px;
+            color: white;
+            font-size: 16px;
+        }
+        .category{
+            padding-left: 10px;
+        }
+        ul{
+            list-style-type: none; /*写在这里,不要写li中*/
+            padding: 0; /*去掉自带的40像素左内边距,这样li的元素就可以顶格显示了*/
+            overflow: hidden; /*解决所有子元素全部浮动时高度为0的问题*/
+            margin: 0;/*去掉自带的上下边距*/
+        }
+        li{
+            float: left;
+            margin-right: 10px;
+        }
+        p{
+            color: #62B5EC;
+            margin: 20px 0 5px 0;
+        }
+        a{
+            text-decoration: none;
+            color: #0AA1ED;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="div_top">
+            <img src="http://doc.canglaoshi.org/tstore_v1/images/itemCat/computer_icon1.png" alt="">
+            <span>电脑,办公/1F</span>
+        </div>
+        <div class="category">
+            <p>电脑整机</p>
+            <ul>
+                <li><a href="#">笔记本</a></li>
+                <li><a href="#">游戏机</a></li>
+                <li><a href="#">台式机</a></li>
+                <li><a href="#">一体机</a></li>
+                <li><a href="#">服务器</a></li>
+                <li><a href="#">联想</a></li>
+            </ul>
+        </div>
+        <div class="category">
+            <p>电脑配件</p>
+            <ul>
+                <li><a href="#">CPU</a></li>
+                <li><a href="#">SSD硬盘</a></li>
+                <li><a href="#">显示器</a></li>
+                <li><a href="#">显卡</a></li>
+                <li><a href="#">组装电脑</a></li>
+                <li><a href="#">机箱</a></li>
+            </ul>
+        </div>
+        <div class="category">
+            <p>外设/游戏</p>
+            <ul>
+                <li><a href="#">键盘</a></li>
+                <li><a href="#">鼠标</a></li>
+                <li><a href="#">U盘</a></li>
+                <li><a href="#">移动硬盘</a></li>
+                <li><a href="#">游戏设备</a></li>
+                <li><a href="#">智能单车</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

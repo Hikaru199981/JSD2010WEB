@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>综合练习</title>
+    <style>
+        body{
+            font: 12px "simhei", Arial, Helvetica, sans-serif;
+        }
+        body>div{
+            width: 1000px;
+            margin: 0 auto; /*让元素居中,text-align是让内容居中*/
+        }
+        #top_div,#bottom_div{
+            overflow: hidden; /*解决高度识别问题*/
+        }
+        #t_left{
+            float: left;
+            width: 561px;
+            height: 376px;
+            background-image: url("http://doc.canglaoshi.org/tstore_v1/images/itemCat/study_computer_img1.png");
+            background-repeat: no-repeat;
+            background-size: 318px 319px;
+            background-color: #E8E8E8;
+            background-position: 90% 50%;
+            padding-left:50px;
+        }
+        .p1{
+            font-size: 32px;
+            margin-top: 50px;
+            margin-bottom: 0;
+        }
+        .p2{
+            font-size: 12px;
+        }
+        .p3{
+            color: #0AA1ED;
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+        /*可以使用#top_div a{} 来搜索*/
+        div>a{
+            display: block;
+            width: 132px;
+            height: 40px;
+            text-decoration: none;
+            color: white;
+            background-color: #0AA1ED;
+            text-align: center;
+            line-height: 40px;
+            font-size: 20px;
+            border-radius: 2px;
+        }
+        #t_right{
+            float: right;
+            width: 355px;
+            height: 376px;
+            background-color: #E8E8E8;
+            background-image: url("http://doc.canglaoshi.org/tstore_v1/images/itemCat/study_computer_img2.png");
+            background-position: 90% 80%;
+            background-repeat: no-repeat;
+            padding-left: 20px;
+        }
+        #top_div{
+            margin-bottom: 10px;
+        }
+
+        #b_left{
+            width: 366px;
+            height: 233px;
+            float: left;
+            background-color: #E8E8E8;
+        }
+        #b_left_top{
+            width:100%;
+            height: 35px;
+            background-color: #0AA1ED;
+            border-radius: 2px;
+        }
+        #b_left_top>img{
+            margin: 8px 0 0 10px;
+        }
+        #b_left_top>span{
+            position: relative;
+            top: -4px;
+            /*margin-top 没用,除非改成block,但是那样会换行,所以一定要改变相对位置*/
+            color: white;
+            font-size: 16px;
+        }
+        .category{
+            padding: 12px;
+        }
+        .category>ul{
+            list-style-type: none;
+            padding: 0;
+            margin:0;
+        }
+        .category>ul>li{
+            float: left;
+            overflow: hidden;
+            margin-left: 10px;
+        }
+        .category>ul>li>a{
+            color: #0AA1ED;
+            text-decoration: none;
+        }
+        .category>ul>p{
+            color: #62B5EC;
+            margin: 6px 0;
+        }
+
+        .b_right{
+            width: 198px;
+            height: 233px;
+            float: right;
+            background-color: #E8E8E8;
+            margin-left: 10px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <div id="top_div">
+            <div id="t_left">
+                <p class="p1">灵越 燃7000系列</p>
+                <p class="p2">酷睿双核i5处理器|256GB SSD| 8GB内存<br>
+                    英特尔HD显卡620含共享显卡内存</p>
+                <p class="p3">￥4999.00</p>
+                <a href="#">查看详情</a>
+            </div>
+            <div id="t_right">
+                <p class="p1">颜值 框不住</p>
+                <p class="p2">酷睿双核i5处理器|256GB SSD| 8GB内存<br>
+                    英特尔HD显卡620含共享显卡内存</p>
+                <p class="p3">￥6888.00</p>
+                <a href="#">查看详情</a>
+            </div>
+        </div>
+        <div id="bottom_div">
+            <div id="b_left">
+                <div id="b_left_top">
+                    <img src="http://doc.canglaoshi.org/tstore_v1/images/itemCat/computer_icon1.png">
+                    <span>电脑,办公/1F</span>
+                </div>
+                <div class="category">
+                    <ul>
+                        <p>电脑整机</p>
+                        <li class="b_left_li"><a href="#">笔记本</a></li>
+                        <li class="b_left_li"><a href="#">游戏机</a></li>
+                        <li class="b_left_li"><a href="#">台式机</a></li>
+                        <li class="b_left_li"><a href="#">一体机</a></li>
+                        <li class="b_left_li"><a href="#">服务器</a></li>
+                        <li class="b_left_li"><a href="#">联想</a></li>
+                    </ul>
+                </div>
+                <div class="category">
+                    <ul>
+                        <p>电脑配件</p>
+                        <li class="b_left_li"><a href="#">CPU</a></li>
+                        <li class="b_left_li"><a href="#">SSD硬盘</a></li>
+                        <li class="b_left_li"><a href="#">显示器</a></li>
+                        <li class="b_left_li"><a href="#">显卡</a></li>
+                        <li class="b_left_li"><a href="#">组装电脑</a></li>
+                        <li class="b_left_li"><a href="#">机箱</a></li>
+                    </ul>
+                </div>
+                <div class="category">
+                    <ul>
+                        <p>外设/游戏</p>
+                        <li class="b_left_li"><a href="#">键盘</a></li>
+                        <li class="b_left_li"><a href="#">鼠标</a></li>
+                        <li class="b_left_li"><a href="#">U盘</a></li>
+                        <li class="b_left_li"><a href="#">移动硬盘</a></li>
+                        <li class="b_left_li"><a href="#">游戏设备</a></li>
+                        <li class="b_left_li"><a href="#">智能单车</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="b_right">
+                <div>
+                    <img src="http://doc.canglaoshi.org/tstore_v1/images/itemCat/study_computer_img3.png" alt="">
+                </div>
+                <p class="p2">戴尔(DELL)XPS13-9360-R1609 13.3英寸微边框笔记本电脑</p>
+                <p class="p3">￥4600.00</p>
+                <a href="#">查看详情</a>
+            </div>
+            <div class="b_right"></div>
+            <div class="b_right"></div>
+        </div>
+    </div>
+</body>
+</html>
