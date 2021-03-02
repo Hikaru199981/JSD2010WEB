@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动定位</title>
+    <style>
+        body>div{
+            width: 200px;
+            border: 1px solid red;
+            /*当某个元素的所有子元素全部浮动时，则自动识别的高度为0*/
+            overflow: hidden; /*解决高度识别为0的问题*/
+        }
+        #d1{
+            width: 50px; /*若都为80，则红绿并排，蓝色块在红色下方*/
+            height: 50px; /*若55px，则蓝色紧贴在绿色块下方*/
+            background-color: red;
+            float: left
+        }
+        #d2{
+            width: 50px;
+            height: 50px; /*若55px，则蓝色块在红色块下方5px处*/
+            background-color: green;
+            float: left;
+        }
+        #d3{
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="d1"></div>
+        <div id="d2"></div>
+        <div id="d3"></div>
+    </div>
+</body>
+</html>

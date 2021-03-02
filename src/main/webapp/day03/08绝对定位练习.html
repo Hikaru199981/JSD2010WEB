@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绝对定位练习</title>
+    <style>
+        div{
+            width: 280px;
+            background-color: rgba(0,0,0,0.3);
+            padding: 10px;
+            overflow: hidden;
+            position: relative;/*做参照物*/
+        }
+        input[type='text']{
+            display: block;
+            width: 240px;
+            border: none; /*文本框自带边框，所以长度会出错，去掉即可，可以写none也可以写0*/
+            padding: 10px 20px;
+        }
+        img{
+            position: absolute;
+            top: 14px;
+            right: 20px;
+        }
+        p{
+            color: red;
+            font-size: 12px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" placeholder="请输入用户名"><img src="http://doc.canglaoshi.org/tstore_v1/images/login/yhm.png">
+        <p>用户名不能为空</p>
+    </div>
+</body>
+</html>
