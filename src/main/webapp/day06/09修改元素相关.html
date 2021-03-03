@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改元素</title>
+</head>
+<body>
+    <div>
+        <p>刘备</p>
+        <p>关羽</p>
+        <p>张飞</p>
+    </div>
+    <script src="../js/jquery-1.4.2.js"></script>
+    <script>
+        let i=$("<img src='../pic1.jpg'>");
+        // $("div").prepend(i); //添加到最前面
+        // $("div").append(i);  //添加到最后面
+        // $("p:eq(1)").before(i); //添加到关羽前面
+        // $("p:eq(1)").after(i); //添加到关羽后面
+        $("p:last").remove(); //删除元素
+
+    </script>
+</body>
+</html>

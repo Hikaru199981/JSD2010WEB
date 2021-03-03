@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标事件</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div onmouseover="overfn()" onmouseout="outfn()"
+    onmousedown="downfn()" onmouseup="upfn()" onmousemove="movefn()"></div>
+    <script>
+        function movefn() {
+            console.log("鼠标移动");
+        }
+        function overfn() {
+            console.log("鼠标移入");
+        }
+        function outfn() {
+            console.log("鼠标移出");
+        }
+        function downfn() {
+            console.log("鼠标按下");
+        }
+        function upfn() {
+            console.log("鼠标抬起");
+        }
+    </script>
+</body>
+</html>

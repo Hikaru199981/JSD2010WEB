@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>综合练习</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+        }
+        img{
+            width: 100px;
+            height: 100px;
+            float: left; /*img是行内块元素,自带边距,改成浮动的就凑一起了*/
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="添加" onclick="myfn()">
+    <div id="d1"></div>
+    <script>
+        function myfn() {
+            for(let i=0;i<9;i++){
+                let imgName= i%2==0 ? "../pic1.jpg":"../pic2.jpg";
+                d1.innerHTML+="<img src='"+imgName+"'>";
+            }
+        }
+    </script>
+</body>
+</html>

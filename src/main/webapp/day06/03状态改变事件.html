@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>页面状态改变事件</title>
+    <script>
+        //页面加载完成事件,页面内容加载完成之后调用此方法
+        //如果没有此事件,则方法在这个位置无法调用,因为d1还没生成
+        onload=function(){
+            d1.innerText="测试文本";
+        }
+    </script>
+</head>
+<body>
+    <div id="d1"></div>
+    <select name="city" id="s1" onchange="changefn()">
+        <option value="bj">北京</option>
+        <option value="sh">上海</option>
+        <option value="gz">广州</option>
+        <!--onblur 失去焦点事件-->
+        <input id="i1" type="text" onblur="blurfn()" placeholder="请输入用户名">
+        <span id="myspan"></span>
+    </select>
+    <script>
+        function changefn() {
+            alert(s1.value);
+        }
+        function blurfn() {
+            if(i1.value=="tom"){
+                myspan.innerText="用户名已存在";
+            }else{
+                myspan.innerText="用户名可用";
+            }
+        }
+    </script>
+</body>
+</html>

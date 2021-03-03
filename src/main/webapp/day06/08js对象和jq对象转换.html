@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js和jq对象转换</title>
+</head>
+<body>
+    <input type="text" id="i1">
+    <input type="button" value="js->jq" onclick="fn1()">
+    <input type="button" value="jq->js" onclick="fn2()">
+    <script src="../js/jquery-1.4.2.js"></script>
+    <script>
+        function fn1() {
+            //得到js对象
+            let js=document.getElementById("i1");
+            //转成jq对象
+            let jq=$(js);
+            alert(jq.val());
+        }
+        function fn2() {
+            //得到jq对象
+            let jq=$("#i1");
+            //jq对象转成js对象 jq对象实际上就是一个数组 里面装的就是js对象
+            let js=jq[0];
+            alert(js.value);
+        }
+    </script>
+</body>
+</html>

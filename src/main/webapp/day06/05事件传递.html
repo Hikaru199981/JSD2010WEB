@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件传递</title>
+    <style>
+        *{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div onclick="alert('div')">
+        <p onclick="alert('p')">
+            <input type="button" value="按钮" onclick="alert('按钮')">
+        </p>
+    </div>
+</body>
+</html>
