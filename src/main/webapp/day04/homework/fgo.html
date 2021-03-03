@@ -5,14 +5,18 @@
     <title>Fate/Grand Order</title>
     <style>
         body{
-            width: 100%;
+            min-width: 1280px; /*最小固定宽度,如果写width则一直固定不变*/
             margin: 0; /* 去掉留白 */
+            max-width: 100%; /*最大随屏幕而变*/
+            position: relative;
+            background-image: url("txt_bg.png");
         }
 
         /* 1.实现bili头部 */
         #bili{
             height: 36px;
             padding: 10px 12px;
+            background-color: white;
         }
         .bili_list{
             list-style-type: none;
@@ -60,6 +64,38 @@
         }
 
         /*1.2 bili_middle*/
+        #bili_middle{
+            width: 19%;
+            height: 36px;
+            margin: 0 auto;
+            background-color: #F4F4F4;
+            border: 1px solid #E7E7E7;
+            position: relative;
+            top: -16px;
+            left:20px;
+        }
+        #bili_middle span{
+            width: 48px;
+            height: 36px;
+            background-color: #E7E7E7;
+            float: right;
+            text-align: center;
+        }
+        #bili_middle img{
+            position: relative;
+            top: 5px;
+        }
+        #bili_middle input{
+            width: 70%;
+            border: 0;
+            background-color: #F4F4F4;
+            color: #999;
+            font-size: 14px;
+            line-height: 36px;
+            padding-left: 10px;
+
+        }
+        /*悬停未解决 middle随着页面大小而变未解决*/
 
 
         /*1.3 bili_right*/
@@ -96,12 +132,66 @@
         /*2.实现top */
         #top{
             height: 46px;
-            background-color: #161616;
+            background-image: url("http://static.biligame.com/fgo/gw/pc/img/nav/nav-bg.jpg");
+            background-size: 100% 46px;
         }
 
 
+        /*3.实现左侧栏*/
+        #left{
+            float: left;
+            width: 247px;
+            height: 700px;
+            background-color: rgba(255,255,255,0.5);
+        }
 
+        /*4.实现图片滚动模块*/
+        #picd1{
+            width: 100%;
+            height: 700px;
+            background-color: #E7E7E7;
+        }
 
+        /*5.实现最新情报模块*/
+        #picd2{
+            width: 100%;
+            height: 290px;
+            background-image: url("http://static.biligame.com/fgo/gw/pc/img/index/min-news.jpg?dc4e4318");
+        }
+
+        /*6.文字模块*/
+        #txtd3{
+            width: 32.29167%;
+            padding-top: 6.25%;
+            margin-top: 18.95833%;
+            background-image: url("http://static.biligame.com/fgo/gw/pc/img/index/tag.png?8e214bcf");
+            background-size: 100% 100%;
+        }
+        /*7.从者展示模块*/
+        #picd4{
+            width: 100%;
+            height: 400px;/*之后要改成百分比*/
+            background-color: deepskyblue; /*不需要颜色*/
+        }
+        /*8.出品信息文字模块*/
+        #txtd5{
+            width: 100%;
+            padding-top: 59.58333%;
+        }
+        /*9.活动广告模块*/
+        #picd6{
+            width: 100%;
+            padding-top: 16.40625%;
+            background-image: url("http://static.biligame.com/fgo/gw/pc/img/index/bot-bg.png?dae46090");
+            background-size: cover;
+        }
+        /*10.底部模块*/
+        #bottom{
+            width: 100%;
+            height: 160px;
+            padding: 25px 0;
+            background-color: black;
+        }
     </style>
 </head>
 <body>
@@ -130,9 +220,6 @@
                     </ul>
                 </div>
             </div>
-            <div id="bili_middle">
-
-            </div>
             <div id="bili_right">
                 <div>
                     <ul class="bili_list">
@@ -147,8 +234,21 @@
                     </ul>
                 </div>
             </div>
+            <div id="bili_middle">
+                <!--此处middle要放在浮动元素的后面,否则后面right的浮动不能浮动到第一行-->
+                <input type="text" value="这是哪集?自制的?那没事了。">
+                <span>
+                    <img src="bili_search.png" alt="">
+                </span>
+            </div>
         </div>
         <div id="top"></div>
+        <div id="left">
+            <!--left一定要放在这个位置-->
+        </div>
+
+
+
         <div id="picd1"></div>
         <div id="picd2"></div>
         <div id="txtd3"></div>
@@ -156,7 +256,7 @@
         <div id="txtd5"></div>
         <div id="picd6"></div>
         <div id="bottom"></div>
-        <div id="left"></div>
+
     </div>
 </body>
 </html>
