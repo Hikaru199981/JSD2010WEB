@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>页面相关js方法</title>
+</head>
+<body>
+    <div id="d1">我是div</div>
+    <input type="text" id="myinput">
+    <input type="button" value="修改" onclick="myfn()">
+    <script>
+        function myfn() {
+            //通过id获取元素对象
+            let i=document.getElementById("myinput");
+            let d=document.getElementById("d1");
+            //把文本框的值取出给到div
+            d.innerText=i.value;
+        }
+    </script>
+</body>
+</html>

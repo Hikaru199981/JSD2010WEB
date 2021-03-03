@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text">
+<input type="button" value="最前面">
+<input type="button" value="最后面">
+<input type="button" value="上海前面">
+<input type="button" value="上海后面">
+<input type="button" value="删除上海">
+<hr>
+<ul>
+    <li>北京</li>
+    <li>上海</li>
+    <li>广州</li>
+</ul>
+<script src="../js/jquery-1.4.2.js"></script>
+<script>
+    //给第一个按钮添加点击事件
+    $("input:eq(1)").click(function () {
+        //创建li元素对象
+        let li = $("<li></li>");
+        //取出文本框的值给到li
+        li.text($("input:first").val());
+        //把li添加到ul里面
+        $("ul").prepend(li);
+    })
+    $("input:eq(2)").click(function () {
+        //创建li元素对象
+        let li = $("<li></li>");
+        //取出文本框的值给到li
+        li.text($("input:first").val());
+        //把li添加到ul里面
+        $("ul").append(li);
+    })
+    $("input:eq(3)").click(function () {
+        //创建li元素对象
+        let li = $("<li></li>");
+        //取出文本框的值给到li
+        li.text($("input:first").val());
+        //插入到上海前面
+        $("li:contains('上海')").before(li);
+    })
+    $("input:eq(4)").click(function () {
+        //创建li元素对象
+        let li = $("<li></li>");
+        //取出文本框的值给到li
+        li.text($("input:first").val());
+        //插入到上海后面
+        $("li:contains('上海')").after(li);
+    })
+    $("input:eq(5)").click(function () {
+        //删除上海
+        $("li:contains('上海')").remove();
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>平方练习</title>
+</head>
+<body>
+    <input id="i1" type="text">
+    <input type="button" value="平方" onclick="f()">
+    <div id="d1"></div>
+    <script>
+        let i=document.getElementById("i1");
+        let d=document.getElementById("d1");
+        function f() {
+            //判断变量是否是NaN
+            if(isNaN(i.value)){
+                d.innerText="输入错误!";
+            }else{
+                d.innerText=i.value*i.value;
+                //字符串进行减乘除时会自动转成数值,所以乘1即可默认为number
+                // d.innerText=i.value*1+i.value*1;
+                /*如果写+则为字符串相加,其他运算不会出现问题*/
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>方法声明练习</title>
+</head>
+<body>
+    <input type="button" value="按钮" onclick="f1()"><br>
+    <input type="button" value="按钮" onclick="f2('张飞',20)"><br>
+    <input type="button" value="按钮" onclick="alert(a)"><br>
+    <input type="button" value="按钮" onclick="alert(b)"><br>
+    <input type="button" value="按钮" onclick="f5('司马懿')"><br>
+    <input type="button" value="按钮" onclick="f6('刘备')"><br>
+    <script>
+        function f1() {
+            alert("hello");
+        }
+        function f2(name,age) {
+            alert(name+" say:"+age);
+        }
+        function f3() {
+            return "hello";
+        }
+        let a=f3();
+        function f4(name,age) {
+            return name+":"+age;
+        }
+        let b=f4("诸葛亮",20);
+        let f5=function (name) {
+            alert(name+":hello")
+        }
+        let f6=new Function("name","alert(name+':hi')")
+
+    </script>
+</body>
+</html>

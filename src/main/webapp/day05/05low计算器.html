@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>low计算器</title>
+</head>
+<body>
+    <input type="text" id="i1">
+    <input type="text" id="i2"><br>
+    <!--
+    <input type="button" value="加" onclick="plus()">
+    <input type="button" value="减" onclick="minus()">
+    <input type="button" value="乘" onclick="multi()">
+    <input type="button" value="除" onclick="divide()"><br>
+    -->
+    <input type="button" value="加" onclick="f(1)">
+    <input type="button" value="减" onclick="f(2)">
+    <input type="button" value="乘" onclick="f(3)">
+    <input type="button" value="除" onclick="f(4)"><br>
+    <div id="d1"></div>
+    <script>
+        let i1=document.getElementById("i1");
+        /*变量可以在外面声明,但此处不能.value,因为value是点击之后生成的,
+          所以必须在方法内才可以获取*/
+        let i2=document.getElementById("i2");
+        let d1=document.getElementById("d1");
+        //四个合并为一个
+        function f(x) {
+            if(isNaN(i1.value)||isNaN(i2.value)){
+                d1.innerText="请重新输入";
+            }else {
+                switch (x) {
+                    case 1:
+                        d1.innerText=i1.value*1+i2.value*1;
+                        break;
+                    case 2:
+                        d1.innerText=i1.value-i2.value;
+                        break;
+                    case 3:
+                        d1.innerText=i1.value*i2.value;
+                        break;
+                    case 4:
+                        d1.innerText=i1.value/i2.value;
+                        break;
+                }
+            }
+
+        }
+        function plus() {
+            if(isNaN(i1.value)||isNaN(i2.value)){
+                d1.innerText="请重新输入";
+            }else{
+                d1.innerText=i1.value*1+i2.value*1;
+            }
+        }
+        function minus() {
+            if(isNaN(i1.value)||isNaN(i2.value)){
+                d1.innerText="请重新输入";
+            }else{
+                d1.innerText=i1.value-i2.value;
+            }
+        }
+        function multi() {
+            if(isNaN(i1.value)||isNaN(i2.value)){
+                d1.innerText="请重新输入";
+            }else{
+                d1.innerText=i1.value*i2.value;
+            }
+        }
+        function divide() {
+            if(isNaN(i1.value)||isNaN(i2.value)){
+                d1.innerText="请重新输入";
+            }else{
+                d1.innerText=i1.value/i2.value;
+            }
+        }
+    </script>
+</body>
+</html>

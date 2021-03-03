@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js方法声明</title>
+</head>
+<body>
+    <input type="button" value="按钮" onclick="fn1()">
+    <script>
+        //单行注释
+        /*多行注释*/
+        //声明无参无返回值方法
+        function fn1() {
+            alert("fn1执行了");
+        }
+        //调用方法
+        //fn1();
+
+        //声明有参无返回值
+        function fn2(name,age) {
+            alert(name+":"+age);
+        }
+        //调用
+        //fn2("刘苍松",18);
+
+        //声明无参有返回值
+        function fn3() {
+            return "我是返回值";
+        }
+        //let msg=fn3();
+        //alert(msg);
+
+        //声明有参有返回值
+        function fn4(x,y) {
+            return x*y;
+        }
+        // let result=fn4(6,9);
+        // alert(result);
+
+        //第二种声明方法的方式
+        let fn5=function (name,age) {
+            alert(name+":"+age);
+        }
+        // fn5("诸葛亮",20);
+
+        //第三种声明方法的方式
+        let fn6=new Function("name","age","alert(name+':'+age)");
+        /*注意此处alert外层有双引号,所以内层使用单引号*/
+        // fn6("司马懿",30);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>猜数字练习</title>
+</head>
+<body>
+    <input type="text" id="i1" placeholder="请输入1-100整数">
+    <input type="button" value="猜一猜" onclick="f()">
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <script>
+        //获取1-100的随机数
+        let num=parseInt(Math.random()*100+1);
+        let i=document.getElementById("i1");
+        let d=document.getElementById("d1");
+        let answer=document.getElementById("d2");
+        let count=0; //声明统计次数的变量
+        function f() {
+            count++;
+            if(isNaN(i.value)){
+                d.innerHTML="输入内容不是一个数字!请重新输入!";
+            }else if(i.value==num){
+                d.innerHTML="恭喜你!在第"+count+"次猜对啦!";
+            }else if(i.value>num){
+                d.innerHTML="太大啦~";
+            }else {
+                d.innerHTML="太小啦~";
+            }
+            // answer.innerHTML=num; //查看答案
+        }
+    </script>
+</body>
+</html>
