@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>雪花练习</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        img{
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <script src="../js/jquery-1.4.2.js"></script>
+    <script>
+        //开启定时器添加雪花图片
+        setInterval(function () {
+            let img=$("<img src='snow.png'>");
+            //随即雪花尺寸20-40
+            let size=parseInt(Math.random()*21)+20;
+            let left=parseInt(Math.random()*($(window).width()-size));
+            /*注意此处width是一个方法,需要()*/
+            img.css({"width":size+"px","top":"0","left":left+"px"});
+            /*此处不要忘了px*/
+            $("body").append(img);
+            //雪花动画
+            img.animate({"top":$(window).height()-size+"px"},size*100)
+            /*size*100控制雪花降落速度 让其和大小有关*/
+                .fadeOut(1000,function () {
+                    //此方法在动画执行完后执行
+                    img.remove();
+                });
+        },10);
+
+    </script>
+</body>
+</html>

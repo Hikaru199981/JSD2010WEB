@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>响应式布局</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" type="text/css" href="../bootstrap3/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap3/font-awesome-4.7.0/css/font-awesome.css"/>
+
+  <!--插入"栅格系统"->"媒体查询",并修改参数-->
+  <style>
+    @media (max-width: 768px) {
+      body{background-color: red;}
+      h3{color: green;}
+      img{width: 200px;}
+      /*注意此处写width就可,不用size*/
+    }
+    @media (min-width: 768px) and (max-width: 992px) {
+      body{background-color: yellow;}
+      h3{color: blue;}
+      img{width: 400px;}
+    }
+    @media (min-width: 992px) and (max-width: 1200px) {
+      body{background-color: blue;}
+      h3{color: yellow;}
+      img{width: 800px;}
+    }
+    @media (min-width: 1200px) {
+      body{background-color: green;}
+      h3{color: red;}
+      img{width: 1200px;}
+    }
+  </style>
+</head>
+<body>
+  <!--大显示器红色  普通显示器黄色  pad蓝色 手机绿色-->
+  <h3>文本测试</h3>
+  <!--大显示器1200px  普通显示器800px pad400px 手机200px-->
+  <img src="../pic1.jpg" alt="">
+</body>
+<script type="text/javascript" src="../bootstrap3/jquery.min.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/bootstrap.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/holder.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/html5shiv.min.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/css3-mediaqueries.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/respond.min.js"></script>
+</html>

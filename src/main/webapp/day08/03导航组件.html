@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Bootstrap Template导航组件</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" type="text/css" href="../bootstrap3/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap3/font-awesome-4.7.0/css/font-awesome.css"/>
+</head>
+<body>
+  <ul class="nav nav-tabs">
+    <li role="presentation" class="active"><a href="#">Home</a></li>
+    <li role="presentation"><a href="#">Profile</a></li>
+    <li role="presentation"><a href="#">Messages</a></li>
+  </ul>
+  <!--胶囊式-->
+  <ul class="nav nav-pills">
+    <li role="presentation" class="active"><a href="#">Home</a></li>
+    <li role="presentation"><a href="#">Profile</a></li>
+    <li role="presentation"><a href="#">Messages</a></li>
+  </ul>
+  <!--添加下拉菜单-->
+  <ul class="nav nav-tabs">
+    <li role="presentation" class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+        魏 <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu">
+        <li>曹操</li>
+        <li>司马懿</li>
+        <li>荀彧</li>
+      </ul>
+    </li>
+    <li role="presentation" class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+        蜀 <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu">
+        <li>诸葛亮</li>
+        <li>庞统</li>
+        <li>马超</li>
+      </ul>
+    </li>
+    <li role="presentation" class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+        吴 <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu">
+        <li>孙权</li>
+        <li>陆逊</li>
+        <li>孙尚香</li>
+      </ul>
+    </li>
+
+  </ul>
+
+</body>
+<script type="text/javascript" src="../bootstrap3/jquery.min.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/bootstrap.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/holder.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/html5shiv.min.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/css3-mediaqueries.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/respond.min.js"></script>
+
+<!--给导航栏制作点击事件-->
+<script>
+  $("li").click(function () {
+    //给点击的li添加
+    $(this).attr("class","active").siblings().attr("class","");
+  })
+</script>
+</html>

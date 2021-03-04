@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>响应式栅格系统</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" type="text/css" href="../bootstrap3/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap3/font-awesome-4.7.0/css/font-awesome.css"/>
+
+</head>
+<body>
+  <!--桌面显示器一行6个 pad4个 手机2个-->
+  <div class="row">
+    <div class="col-md-2 col-sm-3 col-xs-6">占2列</div>
+    <div class="col-md-2 col-sm-3 col-xs-6">占2列</div>
+    <div class="col-md-2 col-sm-3 col-xs-6">占2列</div>
+    <div class="col-md-2 col-sm-3 col-xs-6">占2列</div>
+    <div class="col-md-2 col-sm-3 col-xs-6">占2列</div>
+    <div class="col-md-2 col-sm-3 col-xs-6">占2列</div>
+  </div>
+  
+  <!--练习:大显示器6 桌面4 pad3 手机2-->
+  <div class="row">
+    <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">1</div>
+    <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">1</div>
+    <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">1</div>
+    <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">1</div>
+    <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">1</div>
+    <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">1</div>
+  </div>
+
+  <!--响应式图片-->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3"><img class="img-responsive img-rounded" src="../pic1.jpg"></div>
+      <div class="col-md-3"><img class="img-responsive img-circle" src="../pic1.jpg"></div>
+      <div class="col-md-3"><img class="img-responsive img-thumbnail" src="../pic1.jpg"></div>
+      <div class="col-md-3"><img class="img-responsive" src="../pic1.jpg"></div>
+    </div>
+  </div>
+
+  <!--组件->略缩图->自定义内容-->
+  <div class="row">
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <img src="jia1.jpg" alt="">
+        <div class="caption">
+          <h3>Jia</h3>
+          <p>喜欢吗?</p>
+          <p><a href="#" class="btn btn-primary" role="button">喜欢</a> <a href="#" class="btn btn-default" role="button">非常喜欢</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <img src="jia2.jpg" alt="">
+        <div class="caption">
+          <h3>Jia</h3>
+          <p>心动吗?</p>
+          <p><a href="#" class="btn btn-primary" role="button">喜欢</a> <a href="#" class="btn btn-default" role="button">非常喜欢</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <img src="jia3.jpg" alt="">
+        <div class="caption">
+          <h3>Jia</h3>
+          <p>爱我吗?</p>
+          <p><a href="#" class="btn btn-primary" role="button">喜欢</a> <a href="#" class="btn btn-default" role="button">非常喜欢</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script type="text/javascript" src="../bootstrap3/jquery.min.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/bootstrap.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/holder.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/html5shiv.min.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/css3-mediaqueries.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/respond.min.js"></script>
+</html>

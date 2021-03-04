@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>栅格系统</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" type="text/css" href="../bootstrap3/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap3/font-awesome-4.7.0/css/font-awesome.css"/>
+<style>
+  div>div{border: 1px solid red}
+</style>
+</head>
+<body>
+  <!--分块效果-->
+  <div class="row">
+  <!--定义一行-->
+    <div class="col-md-6">占6列</div>
+    <div class="col-md-6">占6列</div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">占4列</div>
+    <div class="col-md-4">占4列</div>
+    <div class="col-md-4">占4列</div>
+  </div>
+
+  <!--居中效果-->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">居中占6列</div>
+      <div class="col-md-6">居中占6列</div>
+    </div>
+  </div>
+
+  <!--练习1: 一行显示3部分 比例:1:2:3-->
+  <div class="row">
+    <div class="col-md-2">1</div>
+    <div class="col-md-4">2</div>
+    <div class="col-md-6">3</div>
+  </div>
+  <!--练习2: 一行显示3部分 比例:1:2:1-->
+  <div class="row">
+    <div class="col-md-3">1</div>
+    <div class="col-md-6">2</div>
+    <div class="col-md-3">1</div>
+  </div>
+  <!--练习3: 一行显示5部分 比例:2:3:2:3:2 并居中-->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2">2</div>
+      <div class="col-md-3">3</div>
+      <div class="col-md-2">2</div>
+      <div class="col-md-3">3</div>
+      <div class="col-md-2">2</div>
+    </div>
+  </div>
+
+  <!--列偏移 col-md-offset-n:
+      如果一行的列数不足12列时有可能使用到列偏移-->
+  <div class="row">
+    <div class="col-md-8 col-md-offset-4">占8列</div>
+  </div>
+</body>
+<script type="text/javascript" src="../bootstrap3/jquery.min.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/bootstrap.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/holder.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/html5shiv.min.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/css3-mediaqueries.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/respond.min.js"></script>
+</html>
