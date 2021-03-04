@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车练习</title>
+</head>
+<body>
+    <h3>购物车</h3>
+    <input type="checkbox" value="5000">华为手机5000元<br>
+    <input type="checkbox" value="3000">小米电视3000元<br>
+    <input type="checkbox" value="80">罗技鼠标80元<br>
+    <input type="checkbox" value="2000">苹果电脑2000元<br>
+    <input type="checkbox" id="all">全选
+    <p>总价:0元</p>
+    <script src="../js/jquery-1.4.2.js"></script>
+    <script>
+        //给所有多选框添加点击事件
+        $("input").click(function () {
+            //判断出点击的全选
+            if(this.id=="all"){
+                // alert("全选");
+                //取出全选多选框的选中状态
+                let status=$(this).attr("checked");
+                //把全选的状态给到其他的几个多选框
+                $(this).siblings("input").attr("checked",status);
+            }
+
+            //计算总价
+            let total=0;
+            //统计勾选数量
+            let count=0;
+            //遍历每一个多选框(除了全选)
+            $("input:not(#all)").each(function () {
+                //判断是否选中(此处的this是遍历的this)
+                if($(this).attr("checked")){
+                //满足条件说明选中了
+                    let money=this.value*1;
+                    total+=money;
+                    count++;
+                }
+            });
+            //修改全选状态
+            $("#all").attr("checked",count==4); //让选中数量和勾选状态建立关系
+
+            //显示总价
+            $("p").text("总价:"+total+"元");
+        });
+    </script>
+</body>
+</html>

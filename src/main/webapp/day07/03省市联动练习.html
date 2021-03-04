@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>省市联动练习</title>
+</head>
+<body>
+    <select>
+        <option>请选择</option>
+        <option value="0">河北</option>
+        <option value="1">台湾</option>
+        <option value="2">山东</option>
+    </select>
+    <select>
+        <option>请选择</option>
+    </select>
+
+    <script src="../js/jquery-1.4.2.js"></script>
+    <script>
+        let arr=[["唐山","秦皇岛","石家庄"],
+                 ["台北","高雄","基隆"],
+                 ["青岛","烟台","淄博"]];
+        //给第一个下拉选添加值改变事件
+        $("select:first").change(function () {
+            //让第二个下拉选中只有一个 请选择(相当于删除了其他城市信息)
+            $("select:last").html("<option>请选择</option>");
+
+            //取出二维数组中点击省份对应的城市数组
+            let cities=arr[this.value];
+            // alert(cities);
+            for(let i=0;i<cities.length;i++){
+                let cityName=cities[i];
+                //创建option
+                let o=$("<option></option>");
+                o.text(cityName);
+                //把option添加到第二个下拉选
+                $("select:last").append(o);
+            }
+        });
+
+
+    </script>
+</body>
+</html>

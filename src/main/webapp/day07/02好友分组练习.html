@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>好友分组练习</title>
+</head>
+<body>
+    <ul>
+        <li>同事们
+            <ul>
+                <li>马云</li>
+                <li>马化腾</li>
+                <li>任正非</li>
+            </ul>
+        </li>
+        <li>老乡们
+            <ul>
+                <li>习大大</li>
+                <li>马大姐</li>
+                <li>老干妈</li>
+            </ul>
+        </li>
+        <li>前女友们
+            <ul>
+                <li>孙尚香</li>
+                <li>貂蝉</li>
+                <li>虞姬</li>
+            </ul>
+        </li>
+    </ul>
+
+    <script src="../js/jquery-1.4.2.js"></script>
+    <script>
+        //得到第二层的ul并让其隐藏
+        $("li>ul").hide(); /*ul>ul就不行,ul ul才可*/
+        $("body>ul>li").click(function () {
+            //this 代表触发事件的元素对象 this是js对象
+            //由于this是js对象,而且children是jq对象的方法,所以要转换
+            $(this).children().toggle();
+            //得到点击的li的两个兄弟li里面的ul让其隐藏
+            $(this).siblings().children().hide();
+        })
+
+    </script>
+</body>
+</html>

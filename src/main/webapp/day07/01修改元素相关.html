@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改元素相关</title>
+</head>
+<body>
+    <h1>样式测试</h1>
+    <input type="checkbox">
+    <script src="../js/jquery-1.4.2.js"></script>
+    <script>
+        //设置css样式
+        $("h1").css("color","red");
+        //获取css样式
+        alert($("h1").css("color"));
+        //批量修改背景颜色为绿色 字体大小改为10
+        $("h1").css({"background-color":"green","font-size":"10px"});
+
+        //获取和修改元素的属性 attr=attribute属性
+        // $("input").attr("checked","checked");
+        $("input").attr("checked",true);
+        //获取属性值
+        alert($("input").attr("checked"));
+
+
+    </script>
+</body>
+</html>

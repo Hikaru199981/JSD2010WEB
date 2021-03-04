@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>员工列表练习</title>
+</head>
+<body>
+    <input type="text" placeholder="姓名">
+    <input type="text" placeholder="年龄">
+    <input type="text" placeholder="工资">
+    <input type="text" placeholder="工作">
+    <input type="button" value="添加">
+    <hr>
+    <table border="1">
+        <caption>员工列表</caption>
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>工资</th>
+            <th>工作</th>
+            <th>操作</th>
+        </tr>
+    </table>
+
+    <script src="../js/jquery-1.4.2.js"></script>
+    <script>
+        //给按钮添加点击事件
+        $("input:last").click(function () {
+            //创建1个tr和5个td(注意不是th)
+            let tr=$("<tr></tr>");
+            let name=$("<td></td>");
+            let age=$("<td></td>");
+            let salary=$("<td></td>");
+            let job=$("<td></td>");
+            let del=$("<td><input type='button' value='删除'></td>");
+            //得到td里面的按钮
+            /*
+            del.children().click(function () {
+                //删除当前行
+                tr.remove();
+            });
+             */
+            //给td设置文本内容
+            name.text($("input:eq(0)").val());
+            age.text($("input:eq(1)").val());
+            salary.text($("input:eq(2)").val());
+            job.text($("input:eq(3)").val());
+            //把td装进tr
+            tr.append(name);
+            tr.append(age);
+            tr.append(salary);
+            tr.append(job);
+            tr.append(del);
+            //把tr装进table
+            $("table").append(tr);
+        });
+
+        /*
+           以下代码的错误原因在于此处无法找到删除按钮
+           删除按钮在上一个click事件里面加入,要对它进行操作只能在
+           那个事件中添加方法
+        */
+        /*
+        $("input[value='删除']").click(function () {
+            $(this).parent("tr").remove();
+        });
+        */
+    </script>
+</body>
+</html>

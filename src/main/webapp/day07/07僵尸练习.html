@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>僵尸练习</title>
+    <style>
+        body{
+            background-image: url("zombies/bg1.jpg");
+            overflow: hidden;
+        }
+        img{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <h3 id="s_h3">干掉数量:0</h3>
+    <h3 id="f_h3">跑掉数量:0</h3>
+    <script src="../js/jquery-1.4.2.js"></script>
+    <script>
+        let sCount=0; //成功次数
+        let fCount=0; //失败次数
+
+        //获取窗口宽高
+        let w=$(window).width();
+        let h=$(window).height();
+        //把得到的宽高给背景图片
+        $("body").css("background-size",w+"px "+h+"px");
+        /*注意此处w+"px "+h+"px"的写法,写错一点就不对了*/
+
+        //窗口尺寸改变事件
+        onresize=function () {
+            w=$(window).width();
+            /*window本身就是对象,不用双引号,只有选择器才使用双引号*/
+            h=$(window).height();
+            $("body").css("background-size",w+"px "+h+"px");
+        }
+
+        //开启定时器
+        setInterval(function () {
+            //设置僵尸种类
+            //0-19 0   20-39 1   40-59 2   60... 3
+            let type=parseInt(sCount/20);
+            if(type>3){
+                type=3;
+            }
+            let img=$("<img src='zombies/zomb"+type+".png'>");
+
+            //给僵尸设置血量
+            img.attr("hp",type+1);
+
+            //设置僵尸位置(随机top)
+            let top=parseInt(Math.random()*(h-50));
+            img.css({"left":w+"px","top":top+"px"});
+            $("body").append(img);
+
+
+            //给僵尸图片添加移入事件
+            img.mouseover(function () {
+                //取出当前的血量
+                let hp=img.attr("hp");
+                hp--;
+                //把新的血量赋值回去
+                img.attr("hp",hp);
+                //判断是否没血了
+                if(hp<=0){
+                    img.remove();
+                    //统计消灭的僵尸
+                    sCount++;
+                    $("#s_h3").text("干掉数量:"+sCount);
+                }
+            })
+        },500)
+
+        //开启定时器移动僵尸图片
+        setInterval(function () {
+            $("img").each(function () {
+                let left=parseInt($(this).css("left"));
+                left-=1;
+                $(this).css("left",left+"px");
+                //判断走到房子位置删除僵尸
+                if(left<=w*0.11){
+                    $(this).remove();
+                    /*注意此处不是改变left到屏幕右边,而是要把整个元素删掉*/
+                    //统计跑掉的僵尸
+                    fCount++;
+                    $("#f_h3").text("跑掉数量:"+fCount);
+
+                    //判断游戏结束条件
+                    if(fCount==10){
+                        setTimeout(function () {
+                            /*因为弹出的优先级比较高,如果不延迟会在页面中显示的跑掉数量变成10之前弹出alert框*/
+                            alert("游戏结束!");
+                            location.reload(); /*重新加载页面*/
+                        },100);
+                    }
+                }
+            })
+        },10)
+    </script>
+</body>
+</html>

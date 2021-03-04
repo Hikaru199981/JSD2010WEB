@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图练习</title>
+    <style>
+        div,img{
+            width: 150px;
+            height: 150px;
+        }
+        div{
+            overflow: hidden; /*图片明显超出了div的范围,想要超出部分不显示,变为hidden*/
+            position: relative; /*做参照物*/
+        }
+        img{
+            /*因为div就这么大,所以就算img浮动也不能并排*/
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="jia1.jpg" alt="">
+        <img src="jia2.jpg" alt="">
+        <img src="jia3.jpg" alt="">
+    </div>
+    <script src="../js/jquery-1.4.2.js"></script>
+    <script>
+        //得到所有图片并遍历
+        $("img").each(function (i) {
+            //0*150 1*150 2*150
+            $(this).css("left",i*150+"px");
+        })
+
+        function change(){
+            //开启移动图片的定时器
+            let timer=setInterval(function () {
+                //得到所有的图片遍历
+                $("img").each(function () {
+                    //得到之前的left
+                    let left=parseInt($(this).css("left"));
+                    /*parseInt会自动去掉数字后面的字符,但如果第一位是字符则会变成NaN*/
+                    left-=10;
+                    //如果图片移出,则扔到最后面
+                    if(left<=-150){
+                        left=300;
+                        //停止定时器
+                        clearInterval(timer);
+                    }
+                    //把变小的left赋值回去
+                    $(this).css("left",left+"px");
+                })
+            },10)
+        }
+        //开启定时器 每隔两秒换一张图片
+        let changeTimer=setInterval(change,1000);
+        //鼠标移入事件
+        $("div").mouseover(function () {
+            clearInterval(changeTimer);
+        })
+        //鼠标移出事件
+        $("div").mouseout(function () {
+            changeTimer=setInterval(change,1000);
+            /*此处注意一定要赋值给changeTimer,否则之后移入事件就失效了*/
+        })
+
+    </script>
+</body>
+</html>
