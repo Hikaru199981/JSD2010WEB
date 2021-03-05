@@ -25,6 +25,7 @@
         let li = $("<li></li>");
         //取出文本框的值给到li
         li.text($("input:first").val());
+        /*jq用text(),js用innerText*/
         //把li添加到ul里面
         $("ul").prepend(li);
     })
@@ -43,6 +44,7 @@
         li.text($("input:first").val());
         //插入到上海前面
         $("li:contains('上海')").before(li);
+        /*注意contains()这个选择方式*/
     })
     $("input:eq(4)").click(function () {
         //创建li元素对象

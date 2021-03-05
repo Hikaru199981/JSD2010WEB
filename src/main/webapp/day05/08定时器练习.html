@@ -36,6 +36,7 @@
             if(isNaN(i1.value)){
                 d1.innerText="输入有误!请重新输入!";
             }else {
+                d1.innerText="";
                 switch (x) {
                     case 1:
                         let timer1=setInterval(function () {
@@ -58,6 +59,24 @@
                 }
             }
         }
+
+        /* 二次练习的代码
+           function f(x) {
+             if(isNaN(i1.value)){
+                d1.innerText="请重新输入!";
+             }else {
+                d1.innerText="";
+                let count=0;
+                let timer=setInterval(function () {
+                    d1.innerHTML+="<img src='../pic"+x+".jpg'>"
+                    count++;
+                    if(count==i1.value){
+                        clearInterval(timer);
+                    }
+                },200);
+             }
+           }
+        */
     </script>
 </body>
 </html>
