@@ -12,6 +12,7 @@ public class Demo04 {
         try (
                 Connection conn=DBUtils.getConn();
                 //JDK7以后，需要设置好JDK版本，否则会报错
+                //写在括号里就不用close了
         ){
             Statement s=conn.createStatement();
             //查询数据时只查询有用的字段数据
@@ -23,7 +24,8 @@ public class Demo04 {
 //                System.out.println(name+":"+sal);
 
                 //通过字段的位置获取数据
-                String name=rs.getString(1); //此处下标从1开始
+                String name=rs.getString(1);
+                //此处下标从1开始计数,依据的是上述sql语句中,select之后变量的顺序
                 double sal=rs.getDouble(2);
                 System.out.println(name+":"+sal);
             }

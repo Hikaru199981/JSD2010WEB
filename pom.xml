@@ -6,6 +6,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>09jdbc01</module>
+        <module>09jdbc02</module>
     </modules>
 
     <properties>
