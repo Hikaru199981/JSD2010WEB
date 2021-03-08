@@ -18,7 +18,7 @@ public class DBUtils {
         //创建读取配置文件的属性对象
         Properties p=new Properties();
         //获取resource目录下的文件输入流
-        InputStream ips=Demo03.class.getClassLoader()
+        InputStream ips=DBUtils.class.getClassLoader()
                 .getResourceAsStream("jdbc.properties");
         //让配置文件和属性对象建立关系 异常抛出
         try {

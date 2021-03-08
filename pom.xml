@@ -8,6 +8,7 @@
         <module>09jdbc01</module>
         <module>09jdbc02</module>
         <module>09jdbc03</module>
+        <module>09servlet1_1</module>
     </modules>
 
     <properties>
