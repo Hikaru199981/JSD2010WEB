@@ -21,7 +21,7 @@
                 // alert("全选");
                 //取出全选多选框的选中状态
                 let status=$(this).attr("checked");
-                //把全选的状态给到其他的几个多选框
+                //把全选的状态给到其他的几个多选框(注意siblings内还要写input)
                 $(this).siblings("input").attr("checked",status);
             }
 
@@ -29,12 +29,12 @@
             let total=0;
             //统计勾选数量
             let count=0;
-            //遍历每一个多选框(除了全选)
+            //遍历每一个多选框(除了全选) 使用each函数
             $("input:not(#all)").each(function () {
                 //判断是否选中(此处的this是遍历的this)
                 if($(this).attr("checked")){
                 //满足条件说明选中了
-                    let money=this.value*1;
+                    let money=this.value*1; //此处不*1的话会默认字符串相加
                     total+=money;
                     count++;
                 }

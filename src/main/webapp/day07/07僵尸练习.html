@@ -53,7 +53,7 @@
 
             //设置僵尸位置(随机top)
             let top=parseInt(Math.random()*(h-50));
-            img.css({"left":w+"px","top":top+"px"});
+            img.css({"left":w+"px","top":top+"px"}); //注意此处写法
             $("body").append(img);
 
 
@@ -89,6 +89,8 @@
                     $("#f_h3").text("跑掉数量:"+fCount);
 
                     //判断游戏结束条件
+                    /*注意此处判断必须放在上一个if内,否则无法重新加载,一直弹出弹窗
+                      这是因为,如果放在外面,遍历了几次就会弹出几个弹窗,全部点完才可以重新加载*/
                     if(fCount==10){
                         setTimeout(function () {
                             /*因为弹出的优先级比较高,如果不延迟会在页面中显示的跑掉数量变成10之前弹出alert框*/

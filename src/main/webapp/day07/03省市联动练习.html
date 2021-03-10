@@ -32,7 +32,7 @@
                 let cityName=cities[i];
                 //创建option
                 let o=$("<option></option>");
-                o.text(cityName);
+                o.text(cityName); //注意此句cityName在括号内
                 //把option添加到第二个下拉选
                 $("select:last").append(o);
             }

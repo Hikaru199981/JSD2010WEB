@@ -33,7 +33,7 @@
         })
 
         function change(){
-            //开启移动图片的定时器
+            //开启移动图片的定时器(定时器要在遍历的外层)
             let timer=setInterval(function () {
                 //得到所有的图片遍历
                 $("img").each(function () {
@@ -44,7 +44,7 @@
                     //如果图片移出,则扔到最后面
                     if(left<=-150){
                         left=300;
-                        //停止定时器
+                        //停止定时器(执行完当前代码再停止,所以left依然可以赋值回去)
                         clearInterval(timer);
                     }
                     //把变小的left赋值回去
